@@ -1,0 +1,25 @@
+config.py:
+Create this file.
+Define your hyperparameters here: BATCH_SIZE, BLOCK_SIZE (context length), LEARNING_RATE, DEVICE. Do not hardcode them elsewhere.
+model.py:
+Create a class named BigramLanguageModel.
+It will contain a single nn.Embedding table.
+Its forward method will take idx and targets and compute the cross-entropy loss.
+Its generate method will take idx and max_new_tokens and produce new tokens autoregressively.
+train.py:
+This script will be your training harness.
+It will read the input.txt file.
+It will create the character-level tokenizer (the simple stoi and itos mappings).
+It will instantiate the BigramLanguageModel from model.py.
+It will contain the PyTorch optimizer.
+It will contain the training loop that gets batches of data and performs the optimization step.
+It will use logging to print the loss at regular intervals.
+After training, it will save the trained model weights (model.pth).
+generate.py:
+This script will load the saved model weights.
+It will instantiate the BigramLanguageModel.
+It will take a starting context (e.g., a newline character) and use the model's .generate() method to produce a sample of text.
+README.md:
+Update the README with a new section: "Checkpoint Alpha: Bigram Model."
+Briefly explain what a bigram model is and what its limitations are.
+Show the commands to run training (python train.py) and generation (python generate.py).

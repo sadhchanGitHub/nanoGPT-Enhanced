@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: nanoGPT
+Version: 0.1.0
+Summary: Tiny GPT / Bigram LM for experiments
+Author: Sadhvi Chandragiri
+Requires-Python: >=3.10

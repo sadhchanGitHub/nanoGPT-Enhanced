@@ -1,0 +1,14 @@
+2025-08-22 13:52:20,779 - INFO - Starting new training run...
+2025-08-22 13:52:20,780 - INFO - Using device: cpu
+2025-08-22 13:52:20,780 - INFO - Log file located at: /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/logs/train_20250822_135220.log
+2025-08-22 13:52:20,781 - INFO - ▶ Training run initiated with the following configuration:
+2025-08-22 13:52:20,781 - INFO -    - Full Dataset Used: True
+2025-08-22 13:52:20,781 - INFO -    - Max Epochs:        10
+2025-08-22 13:52:20,781 - INFO -    - Random Seed:       42
+2025-08-22 13:52:20,781 - INFO -    - Model Save Path:   /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-08-22 13:52:20,781 - INFO - ----------------------------------------
+2025-08-22 13:52:20,781 - INFO - 🚀 Starting training engine
+2025-08-22 13:52:20,781 - INFO -    - Using full dataset: True
+2025-08-22 13:52:20,781 - INFO -    - Epochs: 10
+2025-08-22 13:52:20,781 - INFO -    - Random seed: 42
+2025-08-22 13:52:21,263 - INFO - Starting training...

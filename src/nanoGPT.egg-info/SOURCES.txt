@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/nanoGPT/__init__.py
+src/nanoGPT/config.py
+src/nanoGPT/model.py
+src/nanoGPT/training_engine.py
+src/nanoGPT.egg-info/PKG-INFO
+src/nanoGPT.egg-info/SOURCES.txt
+src/nanoGPT.egg-info/dependency_links.txt
+src/nanoGPT.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+2025-08-22 13:35:04,920 - INFO - Starting new training run...
+2025-08-22 13:35:04,920 - INFO - Using device: cpu
+2025-08-22 13:35:04,920 - INFO - Log file located at: /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/logs/train_20250822_133504.log

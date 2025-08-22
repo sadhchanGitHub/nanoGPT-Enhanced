@@ -1,0 +1,25 @@
+2025-08-22 15:24:28,143 - INFO - Starting new training run...
+2025-08-22 15:24:28,144 - INFO - Using device: cuda
+2025-08-22 15:24:28,144 - INFO - Log file located at: /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/logs/train_20250822_152428.log
+2025-08-22 15:24:28,178 - INFO - ▶ Training run initiated with the following configuration:
+2025-08-22 15:24:28,179 - INFO -    - Full Dataset Used: False
+2025-08-22 15:24:28,179 - INFO -    - Sample Size:       5000
+2025-08-22 15:24:28,179 - INFO -    - Max Epochs:        100
+2025-08-22 15:24:28,179 - INFO -    - Random Seed:       42
+2025-08-22 15:24:28,179 - INFO -    - Model Save Path:   /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-08-22 15:24:28,179 - INFO - ----------------------------------------
+2025-08-22 15:24:28,179 - INFO - 🚀 Starting training engine
+2025-08-22 15:24:28,179 - INFO -    - Using full dataset: False
+2025-08-22 15:24:28,179 - INFO -    - Sample size: 5000
+2025-08-22 15:24:28,179 - INFO -    - Epochs: 100
+2025-08-22 15:24:28,179 - INFO -    - Random seed: 42
+2025-08-22 15:24:31,114 - INFO - Starting training...
+2025-08-22 15:24:31,564 - INFO - Epoch 1/100 | Train Loss: 4.8965 | Val Loss: 4.7775 | Val Acc: 0.0000
+2025-08-22 15:24:31,564 - INFO -   -> No improvement. Patience: 1/3
+2025-08-22 15:24:31,576 - INFO - Epoch 2/100 | Train Loss: 4.7286 | Val Loss: 4.8094 | Val Acc: 0.0000
+2025-08-22 15:24:31,576 - INFO -   -> No improvement. Patience: 2/3
+2025-08-22 15:24:31,587 - INFO - Epoch 3/100 | Train Loss: 4.8851 | Val Loss: 4.7324 | Val Acc: 0.0000
+2025-08-22 15:24:31,587 - INFO -   -> No improvement. Patience: 3/3
+2025-08-22 15:24:31,587 - INFO - ⏹ Early stopping triggered after 3 epochs without improvement.
+2025-08-22 15:24:31,587 - INFO - 🏁 Training finished. Best validation accuracy: 0.0000
+2025-08-22 15:24:31,588 - INFO - ✅ Training run script finished.

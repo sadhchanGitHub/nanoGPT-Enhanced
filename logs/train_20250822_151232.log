@@ -1,0 +1,4 @@
+2025-08-22 15:12:32,977 - INFO - Starting new training run...
+2025-08-22 15:12:32,977 - INFO - Using device: cuda
+2025-08-22 15:12:32,977 - INFO - Log file located at: /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/logs/train_20250822_151232.log
+2025-08-22 15:12:32,979 - INFO - ▶ Generating text starting with 'P' for 50 tokens

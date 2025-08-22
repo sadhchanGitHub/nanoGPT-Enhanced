@@ -1,0 +1,28 @@
+2025-08-22 15:12:25,039 - INFO - Starting new training run...
+2025-08-22 15:12:25,039 - INFO - Using device: cuda
+2025-08-22 15:12:25,039 - INFO - Log file located at: /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/logs/train_20250822_151225.log
+2025-08-22 15:12:25,040 - INFO - Using device: cuda
+2025-08-22 15:12:25,041 - INFO - ▶ Training run initiated with the following configuration:
+2025-08-22 15:12:25,041 - INFO -    - Full Dataset Used: True
+2025-08-22 15:12:25,041 - INFO -    - Max Epochs:        10
+2025-08-22 15:12:25,041 - INFO -    - Random Seed:       42
+2025-08-22 15:12:25,041 - INFO -    - Model Save Path:   /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-08-22 15:12:25,041 - INFO - ----------------------------------------
+2025-08-22 15:12:25,041 - INFO - 🚀 Starting training engine
+2025-08-22 15:12:25,041 - INFO -    - Using full dataset: True
+2025-08-22 15:12:25,041 - INFO -    - Epochs: 10
+2025-08-22 15:12:25,041 - INFO -    - Random seed: 42
+2025-08-22 15:12:25,866 - INFO - Starting training...
+2025-08-22 15:12:26,065 - INFO - Epoch 1/10 | Train Loss: 4.7470 | Val Loss: 4.9245 | Val Acc: 0.0000
+2025-08-22 15:12:26,066 - INFO -   -> No improvement. Patience: 1/3
+2025-08-22 15:12:26,080 - INFO - Epoch 2/10 | Train Loss: 4.8222 | Val Loss: 4.8830 | Val Acc: 0.0078
+2025-08-22 15:12:26,084 - INFO -   -> New best model saved with accuracy: 0.0078 to /home/hyd_in_zrh/projects/personal_projects/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-08-22 15:12:26,095 - INFO - Epoch 3/10 | Train Loss: 4.7963 | Val Loss: 4.7348 | Val Acc: 0.0000
+2025-08-22 15:12:26,095 - INFO -   -> No improvement. Patience: 1/3
+2025-08-22 15:12:26,108 - INFO - Epoch 4/10 | Train Loss: 4.7383 | Val Loss: 4.6663 | Val Acc: 0.0078
+2025-08-22 15:12:26,108 - INFO -   -> No improvement. Patience: 2/3
+2025-08-22 15:12:26,116 - INFO - Epoch 5/10 | Train Loss: 4.8567 | Val Loss: 4.6306 | Val Acc: 0.0000
+2025-08-22 15:12:26,116 - INFO -   -> No improvement. Patience: 3/3
+2025-08-22 15:12:26,116 - INFO - ⏹ Early stopping triggered after 3 epochs without improvement.
+2025-08-22 15:12:26,116 - INFO - 🏁 Training finished. Best validation accuracy: 0.0078
+2025-08-22 15:12:26,117 - INFO - ✅ Training run script finished.
