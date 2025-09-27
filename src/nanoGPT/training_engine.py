@@ -8,6 +8,7 @@ import numpy as np
 
 # Relative imports from the project structure
 from .model import BigramLanguageModel
+from .model import MLPBigramLanguageModel
 from . import config
 
 # --- LOGGING SETUP ---
@@ -151,7 +152,18 @@ def main(full_dataset: bool, num_epochs: int, sample_size: int, seed: int = 42):
     # --- Load data ---
     get_batch, vocab_size, stoi, itos = get_source_data(full_dataset, sample_size)
 
-    model = BigramLanguageModel(vocab_size).to(config.DEVICE)
+    #model = BigramLanguageModel(vocab_size).to(config.DEVICE)
+    if config.MODEL_TYPE == "bigram":
+      model = BigramLanguageModel(vocab_size).to(config.DEVICE)
+      logging.info("Using BigramLanguageModel")
+    elif config.MODEL_TYPE == "mlp":
+      model = MLPBigramLanguageModel(vocab_size).to(config.DEVICE)
+      logging.info("Using MLPBigramLanguageModel")
+    else:
+      raise ValueError(f"Unknown MODEL_TYPE: {config.MODEL_TYPE}")
+
+    
+    logging.info(f"   - Model type: {config.MODEL_TYPE}")
     optimizer = torch.optim.AdamW(model.parameters(), lr=config.LEARNING_RATE)
     loss_fn = nn.CrossEntropyLoss()
 

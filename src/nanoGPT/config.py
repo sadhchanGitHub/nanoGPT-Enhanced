@@ -26,7 +26,7 @@ BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 # Data directory for raw datasets, processed data, and cache
 DATA_DIR = os.path.join(BASE_DIR, "data")
-DATA_FILE = f"{DATA_DIR}/synthetic_transactions.txt"
+DATA_FILE = f"{DATA_DIR}/sherlock.txt"
 
 # Directory for storing training logs
 LOGS_DIR = os.path.join(BASE_DIR, "logs")
@@ -62,6 +62,8 @@ D_FF = 4 * D_MODEL     # The inner dimension of the Position-wise Feed-Forward N
 #NUM_CLASSES = 4        # The number of output classes for the classification task 
 MAX_SEQ_LEN = 512     # The maximum sequence length for positional encoding; longer sequences will be truncated
 BLOCK_SIZE = 2  # or 32 if you want longer context
+# config.py
+MODEL_TYPE = "mlp"   # "bigram" or "mlp"
 
 
 

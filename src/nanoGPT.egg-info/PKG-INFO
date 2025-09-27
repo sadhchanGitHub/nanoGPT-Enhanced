@@ -4,3 +4,5 @@ Version: 0.1.0
 Summary: Tiny GPT / Bigram LM for experiments
 Author: Sadhvi Chandragiri
 Requires-Python: >=3.10
+License-File: LICENSE
+Dynamic: license-file

@@ -63,3 +63,41 @@ class BigramLanguageModel(nn.Module):
             next_idx = torch.multinomial(probs, num_samples=1)  # sample
             idx = torch.cat([idx, next_idx], dim=1)  # append
         return idx
+
+class MLPBigramLanguageModel(nn.Module):
+    def __init__(self, vocab_size, hidden_dim=128):
+        super().__init__()
+        self.vocab_size = vocab_size
+        self.fc1 = nn.Linear(vocab_size, hidden_dim)  # input = one-hot
+        self.fc2 = nn.Linear(hidden_dim, vocab_size)  # output = logits
+
+    def forward(self, idx, targets=None):
+        B, T = idx.shape
+
+        # One-hot encode inputs: (B, T, vocab_size)
+        x_onehot = F.one_hot(idx, num_classes=self.vocab_size).float()
+
+        # Pass through MLP
+        x = self.fc1(x_onehot)       # (B, T, hidden_dim)
+        x = F.relu(x)
+        logits = self.fc2(x)         # (B, T, vocab_size)
+
+        loss = None
+        if targets is not None:
+            # Flatten for cross entropy
+            logits_flat = logits.view(B * T, self.vocab_size)
+            targets_flat = targets.view(B * T)
+            loss = F.cross_entropy(logits_flat, targets_flat)
+
+        return logits, loss
+
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens):
+        for _ in range(max_new_tokens):
+            logits, _ = self(idx)           # (B, T, vocab_size)
+            logits = logits[:, -1, :]       # last token
+            probs = F.softmax(logits, dim=-1)
+            next_idx = torch.multinomial(probs, num_samples=1)
+            idx = torch.cat([idx, next_idx], dim=1)
+        return idx
+
