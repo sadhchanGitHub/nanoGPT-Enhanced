@@ -101,3 +101,84 @@ class MLPBigramLanguageModel(nn.Module):
             idx = torch.cat([idx, next_idx], dim=1)
         return idx
 
+
+class MLPTrigramLanguageModel(nn.Module):
+    def __init__(self, vocab_size, embed_dim=64, hidden_dim=128):
+        super().__init__()
+        self.vocab_size = vocab_size                # ← add this
+        self.token_embedding = nn.Embedding(vocab_size, embed_dim)  # learned embeddings
+        self.fc1 = nn.Linear(embed_dim * 2, hidden_dim)  # for trigram, concat 2 previous embeddings
+        self.fc2 = nn.Linear(hidden_dim, vocab_size)
+  
+    def forward(self, idx, targets=None):
+        B, T = idx.shape
+
+        if T < 2:
+            raise ValueError("Sequence length must be at least 2 for trigram model")
+
+        # Prepare trigram context
+        contexts = torch.stack([idx[:, i:i+2] for i in range(T-1)], dim=1)  # (B, T-1, 2)
+        x = self.token_embedding(contexts)                                    # (B, T-1, 2, embed_dim)
+        x = x.view(B, T-1, -1)                                                # (B, T-1, 2*embed_dim)
+        x = F.relu(self.fc1(x))
+        logits = self.fc2(x)                                                  # (B, T-1, vocab_size)
+
+        loss = None
+        """
+        if targets is not None:
+            # Shift targets by one to match the trigram predictions
+            targets_shifted = targets[:, 1:]                                   # (B, T-1)
+            loss = F.cross_entropy(logits.view(-1, self.vocab_size), targets_shifted.view(-1))
+        """
+        if targets is not None:
+          targets_shifted = targets[:, 1:]           # (B, T-1)
+          loss = F.cross_entropy(
+              logits.reshape(-1, self.vocab_size),  # <- use reshape
+              targets_shifted.reshape(-1)
+          )
+
+        return logits, loss
+    """
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens):
+        for _ in range(max_new_tokens):
+            context = idx[:, -2:]              # last 2 tokens
+            logits, _ = self(context)         # (B, 1, vocab_size) or (B, vocab_size)
+            logits = logits[:, -1, :]         # pick last step
+            probs = F.softmax(logits, dim=-1)
+            next_idx = torch.multinomial(probs, 1)
+            idx = torch.cat([idx, next_idx], dim=1)
+        return idx
+    """
+    #✅ This makes the sampling less random and more likely to repeat meaningful sequences.
+    
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens, temperature=0.8, top_k=None):
+        """
+        idx: (B, T) starting context
+        temperature: float <1 for more deterministic output
+        top_k: if set, restrict sampling to top-k probable tokens
+        """
+        for _ in range(max_new_tokens):
+            context = idx[:, -2:]               # last 2 tokens
+            logits, _ = self(context)           # (B, 1, vocab_size)
+            logits = logits[:, -1, :]           # pick last step
+
+            # temperature scaling
+            logits = logits / temperature
+
+            if top_k is not None:
+                # Keep only top_k logits
+                v, _ = torch.topk(logits, top_k)
+                min_v = v[:, -1].unsqueeze(1)
+                logits[logits < min_v] = -float('Inf')
+
+            probs = F.softmax(logits, dim=-1)
+            next_idx = torch.multinomial(probs, 1)
+            idx = torch.cat([idx, next_idx], dim=1)
+        return idx
+
+
+
+
+

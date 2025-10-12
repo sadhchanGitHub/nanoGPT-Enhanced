@@ -3,7 +3,7 @@ import logging
 import torch
 
 from nanoGPT import config
-from nanoGPT.model import BigramLanguageModel, MLPBigramLanguageModel
+from nanoGPT.model import BigramLanguageModel, MLPBigramLanguageModel,MLPTrigramLanguageModel
 
 # --- Logging setup ---
 logging.basicConfig(
@@ -22,6 +22,8 @@ def generate_text(start_text: str, max_new_tokens: int):
         model = BigramLanguageModel(len(stoi))
     elif config.MODEL_TYPE == "mlp":
         model = MLPBigramLanguageModel(len(stoi))
+    elif config.MODEL_TYPE == "mlptrigram":
+        model = MLPTrigramLanguageModel(len(stoi))        
     else:
         raise ValueError(f"❌ Unknown MODEL_TYPE: {config.MODEL_TYPE}")
 
@@ -36,7 +38,16 @@ def generate_text(start_text: str, max_new_tokens: int):
         raise ValueError(f"❌ Character {e.args[0]} not in vocabulary")
 
     # Generate sequence
-    generated_idx = model.generate(idx, max_new_tokens)
+    # generated_idx = model.generate(idx, max_new_tokens)
+    
+    # Generate sequence with temperature and top-k
+    generated_idx = model.generate(
+        idx,
+        max_new_tokens,
+        temperature=0.8,  # less random early in training
+        top_k=5           # only pick from top 5 probable chars
+    )
+
     generated_text = "".join([itos[i.item()] for i in generated_idx[0]])
     return generated_text
 

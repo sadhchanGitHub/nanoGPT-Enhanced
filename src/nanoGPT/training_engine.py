@@ -9,6 +9,7 @@ import numpy as np
 # Relative imports from the project structure
 from .model import BigramLanguageModel
 from .model import MLPBigramLanguageModel
+from .model import MLPTrigramLanguageModel
 from . import config
 
 # --- LOGGING SETUP ---
@@ -86,12 +87,22 @@ def train_loop(model, optimizer, loss_fn, num_epochs, get_batch, stoi, itos):
         model.eval()
         with torch.no_grad():
             xb, yb = get_batch("val")
+            xb = xb.to(config.DEVICE)
+            yb = yb.to(config.DEVICE)
+
             logits, val_loss = model(xb, yb)
 
+            # --- SHIFT TARGETS IF TRIGRAM ---
+            if config.MODEL_TYPE == "mlptrigram":
+                targets_shifted = yb[:, 1:]  # drop first token
+            else:
+                targets_shifted = yb
+
             preds = torch.argmax(logits, dim=-1)
-            correct = (preds == yb).sum().item()
-            total = yb.numel()
+            correct = (preds == targets_shifted).sum().item()
+            total = targets_shifted.numel()
             val_accuracy = correct / total
+
 
         logging.info(
             f"Epoch {epoch+1}/{num_epochs} | "
@@ -159,6 +170,9 @@ def main(full_dataset: bool, num_epochs: int, sample_size: int, seed: int = 42):
     elif config.MODEL_TYPE == "mlp":
       model = MLPBigramLanguageModel(vocab_size).to(config.DEVICE)
       logging.info("Using MLPBigramLanguageModel")
+    elif config.MODEL_TYPE == "mlptrigram":
+      model = MLPTrigramLanguageModel(vocab_size).to(config.DEVICE)
+      logging.info("Using MLPTrigramLanguageModel")      
     else:
       raise ValueError(f"Unknown MODEL_TYPE: {config.MODEL_TYPE}")
 
@@ -172,4 +186,4 @@ def main(full_dataset: bool, num_epochs: int, sample_size: int, seed: int = 42):
 
 
 if __name__ == "__main__":
-    main(full_dataset=True, num_epochs=50, sample_size=5000, seed=42)
+    main(full_dataset=True, num_epochs=500, sample_size=5000, seed=42)

@@ -61,16 +61,16 @@ NUM_LAYERS = 4         # Number of stacked Encoder layers in the Transformer
 D_FF = 4 * D_MODEL     # The inner dimension of the Position-wise Feed-Forward Networks
 #NUM_CLASSES = 4        # The number of output classes for the classification task 
 MAX_SEQ_LEN = 512     # The maximum sequence length for positional encoding; longer sequences will be truncated
-BLOCK_SIZE = 2  # or 32 if you want longer context
+BLOCK_SIZE = 32  # or 32 if you want longer context
 # config.py
-MODEL_TYPE = "mlp"   # "bigram" or "mlp"
+MODEL_TYPE = "mlptrigram"   # "bigram" or "mlp" or "mlptrigram"
 
 
 
 # --- TRAINING HYPERPARAMETERS ---
 
-LEARNING_RATE = 1e-4   # The initial learning rate for the Adam optimizer
-
+#LEARNING_RATE = 1e-4   # The initial learning rate for the Adam optimizer
+LEARNING_RATE = 1e-3   # Slightly higher for small MLP models, stable for short sequences
 
 # --- EARLY STOPPING PARAMETERS ---
 

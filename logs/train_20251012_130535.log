@@ -1,0 +1,65 @@
+2025-10-12 13:05:35,998 - INFO - Starting new training run...
+2025-10-12 13:05:35,998 - INFO - Using device: cpu
+2025-10-12 13:05:35,999 - INFO - Log file located at: /content/nanoGPT-Enhanced/logs/train_20251012_130535.log
+2025-10-12 13:05:36,009 - INFO - ▶ Training run initiated with the following configuration:
+2025-10-12 13:05:36,009 - INFO -    - Full Dataset Used: True
+2025-10-12 13:05:36,009 - INFO -    - Max Epochs:        50
+2025-10-12 13:05:36,009 - INFO -    - Random Seed:       42
+2025-10-12 13:05:36,009 - INFO -    - Model Save Path:   /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-12 13:05:36,009 - INFO - ----------------------------------------
+2025-10-12 13:05:36,010 - INFO - 🚀 Starting training engine
+2025-10-12 13:05:36,010 - INFO -    - Using full dataset: True
+2025-10-12 13:05:36,010 - INFO -    - Epochs: 50
+2025-10-12 13:05:36,010 - INFO -    - Random seed: 42
+2025-10-12 13:05:36,126 - INFO - Using BigramLanguageModel
+2025-10-12 13:05:36,127 - INFO -    - Model type: bigram
+2025-10-12 13:05:37,492 - INFO - Starting training...
+2025-10-12 13:05:37,505 - INFO - Epoch 1/50 | Train Loss: 5.2617 | Val Loss: 5.2122 | Val Acc: 0.0078
+2025-10-12 13:05:37,508 - INFO -   -> New best model saved with accuracy: 0.0078 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-12 13:05:37,518 - INFO - Epoch 2/50 | Train Loss: 5.0580 | Val Loss: 5.1787 | Val Acc: 0.0078
+2025-10-12 13:05:37,519 - INFO -   -> No improvement. Patience: 1/10
+2025-10-12 13:05:37,529 - INFO - Epoch 3/50 | Train Loss: 5.1600 | Val Loss: 5.1344 | Val Acc: 0.0156
+2025-10-12 13:05:37,530 - INFO -   -> New best model saved with accuracy: 0.0156 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-12 13:05:37,539 - INFO - Epoch 4/50 | Train Loss: 5.0461 | Val Loss: 5.1955 | Val Acc: 0.0000
+2025-10-12 13:05:37,539 - INFO -   -> No improvement. Patience: 1/10
+2025-10-12 13:05:37,547 - INFO - Epoch 5/50 | Train Loss: 5.1657 | Val Loss: 5.2400 | Val Acc: 0.0156
+2025-10-12 13:05:37,547 - INFO -   -> No improvement. Patience: 2/10
+2025-10-12 13:05:37,552 - INFO - Epoch 6/50 | Train Loss: 5.0018 | Val Loss: 5.2324 | Val Acc: 0.0156
+2025-10-12 13:05:37,553 - INFO -   -> No improvement. Patience: 3/10
+2025-10-12 13:05:37,558 - INFO - Epoch 7/50 | Train Loss: 5.4735 | Val Loss: 5.3020 | Val Acc: 0.0000
+2025-10-12 13:05:37,558 - INFO -   -> No improvement. Patience: 4/10
+2025-10-12 13:05:37,563 - INFO - Epoch 8/50 | Train Loss: 5.1994 | Val Loss: 5.0567 | Val Acc: 0.0156
+2025-10-12 13:05:37,563 - INFO -   -> No improvement. Patience: 5/10
+2025-10-12 13:05:37,568 - INFO - Epoch 9/50 | Train Loss: 5.0833 | Val Loss: 5.2945 | Val Acc: 0.0000
+2025-10-12 13:05:37,569 - INFO -   -> No improvement. Patience: 6/10
+2025-10-12 13:05:37,574 - INFO - Epoch 10/50 | Train Loss: 5.2237 | Val Loss: 5.0816 | Val Acc: 0.0000
+2025-10-12 13:05:37,574 - INFO -   -> No improvement. Patience: 7/10
+2025-10-12 13:05:37,579 - INFO - Epoch 11/50 | Train Loss: 5.2456 | Val Loss: 5.1262 | Val Acc: 0.0156
+2025-10-12 13:05:37,579 - INFO -   -> No improvement. Patience: 8/10
+2025-10-12 13:05:37,584 - INFO - Epoch 12/50 | Train Loss: 5.1691 | Val Loss: 5.1394 | Val Acc: 0.0156
+2025-10-12 13:05:37,584 - INFO -   -> No improvement. Patience: 9/10
+2025-10-12 13:05:37,589 - INFO - Epoch 13/50 | Train Loss: 5.2115 | Val Loss: 5.0674 | Val Acc: 0.0312
+2025-10-12 13:05:37,590 - INFO -   -> New best model saved with accuracy: 0.0312 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-12 13:05:37,595 - INFO - Epoch 14/50 | Train Loss: 5.0538 | Val Loss: 5.1401 | Val Acc: 0.0078
+2025-10-12 13:05:37,596 - INFO -   -> No improvement. Patience: 1/10
+2025-10-12 13:05:37,601 - INFO - Epoch 15/50 | Train Loss: 5.1472 | Val Loss: 5.2302 | Val Acc: 0.0000
+2025-10-12 13:05:37,601 - INFO -   -> No improvement. Patience: 2/10
+2025-10-12 13:05:37,606 - INFO - Epoch 16/50 | Train Loss: 5.1866 | Val Loss: 5.0242 | Val Acc: 0.0156
+2025-10-12 13:05:37,606 - INFO -   -> No improvement. Patience: 3/10
+2025-10-12 13:05:37,611 - INFO - Epoch 17/50 | Train Loss: 5.1511 | Val Loss: 5.2366 | Val Acc: 0.0000
+2025-10-12 13:05:37,611 - INFO -   -> No improvement. Patience: 4/10
+2025-10-12 13:05:37,616 - INFO - Epoch 18/50 | Train Loss: 5.1252 | Val Loss: 5.1584 | Val Acc: 0.0000
+2025-10-12 13:05:37,616 - INFO -   -> No improvement. Patience: 5/10
+2025-10-12 13:05:37,621 - INFO - Epoch 19/50 | Train Loss: 5.0477 | Val Loss: 5.1217 | Val Acc: 0.0156
+2025-10-12 13:05:37,621 - INFO -   -> No improvement. Patience: 6/10
+2025-10-12 13:05:37,626 - INFO - Epoch 20/50 | Train Loss: 5.0547 | Val Loss: 5.0956 | Val Acc: 0.0000
+2025-10-12 13:05:37,626 - INFO -   -> No improvement. Patience: 7/10
+2025-10-12 13:05:37,631 - INFO - Epoch 21/50 | Train Loss: 5.0972 | Val Loss: 5.1517 | Val Acc: 0.0078
+2025-10-12 13:05:37,631 - INFO -   -> No improvement. Patience: 8/10
+2025-10-12 13:05:37,636 - INFO - Epoch 22/50 | Train Loss: 5.1188 | Val Loss: 5.3033 | Val Acc: 0.0078
+2025-10-12 13:05:37,637 - INFO -   -> No improvement. Patience: 9/10
+2025-10-12 13:05:37,641 - INFO - Epoch 23/50 | Train Loss: 5.1024 | Val Loss: 5.1638 | Val Acc: 0.0000
+2025-10-12 13:05:37,642 - INFO -   -> No improvement. Patience: 10/10
+2025-10-12 13:05:37,642 - INFO - ⏹ Early stopping triggered after 10 epochs without improvement.
+2025-10-12 13:05:37,642 - INFO - 🏁 Training finished. Best validation accuracy: 0.0312
+2025-10-12 13:05:37,642 - INFO - ✅ Training run script finished.
