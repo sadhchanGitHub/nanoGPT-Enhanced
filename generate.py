@@ -3,7 +3,8 @@ import logging
 import torch
 
 from nanoGPT import config
-from nanoGPT.model import BigramLanguageModel, MLPBigramLanguageModel,MLPTrigramLanguageModel
+from nanoGPT.model import BigramLanguageModel, MLPBigramLanguageModel
+from nanoGPT.model import MLPNgramLanguageModel
 
 # --- Logging setup ---
 logging.basicConfig(
@@ -21,9 +22,9 @@ def generate_text(start_text: str, max_new_tokens: int):
     if config.MODEL_TYPE == "bigram":
         model = BigramLanguageModel(len(stoi))
     elif config.MODEL_TYPE == "mlp":
-        model = MLPBigramLanguageModel(len(stoi))
-    elif config.MODEL_TYPE == "mlptrigram":
-        model = MLPTrigramLanguageModel(len(stoi))        
+        model = MLPBigramLanguageModel(len(stoi))  
+    elif config.MODEL_TYPE == "mlpngram":
+        model = MLPNgramLanguageModel(len(stoi))             
     else:
         raise ValueError(f"❌ Unknown MODEL_TYPE: {config.MODEL_TYPE}")
 

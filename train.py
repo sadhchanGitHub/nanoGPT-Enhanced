@@ -35,7 +35,7 @@ if __name__ == "__main__":
     # --- Argument Parsing ---
     parser = argparse.ArgumentParser(description="Run Bigram LM Training.")
     parser.add_argument("--use_sample", action="store_true", help="Use a sample of the dataset instead of full dataset")
-    parser.add_argument("--num_epochs", type=int, default=50, help="Number of training epochs")
+    parser.add_argument("--num_epochs", type=int, default=500, help="Number of training epochs")
     parser.add_argument("--sample_size", type=int, default=5000, help="Number of records if using sample")
     parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility")
     args = parser.parse_args()

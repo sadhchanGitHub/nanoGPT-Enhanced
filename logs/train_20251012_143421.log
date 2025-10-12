@@ -1,0 +1,13 @@
+2025-10-12 14:34:21,864 - INFO - Starting new training run...
+2025-10-12 14:34:21,864 - INFO - Using device: cpu
+2025-10-12 14:34:21,864 - INFO - Log file located at: /content/nanoGPT-Enhanced/logs/train_20251012_143421.log
+2025-10-12 14:34:21,874 - INFO - ▶ Training run initiated with the following configuration:
+2025-10-12 14:34:21,874 - INFO -    - Full Dataset Used: True
+2025-10-12 14:34:21,874 - INFO -    - Max Epochs:        50
+2025-10-12 14:34:21,874 - INFO -    - Random Seed:       42
+2025-10-12 14:34:21,874 - INFO -    - Model Save Path:   /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-12 14:34:21,874 - INFO - ----------------------------------------
+2025-10-12 14:34:21,875 - INFO - 🚀 Starting training engine
+2025-10-12 14:34:21,875 - INFO -    - Using full dataset: True
+2025-10-12 14:34:21,875 - INFO -    - Epochs: 50
+2025-10-12 14:34:21,875 - INFO -    - Random seed: 42

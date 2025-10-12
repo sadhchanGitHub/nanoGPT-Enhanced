@@ -63,7 +63,9 @@ D_FF = 4 * D_MODEL     # The inner dimension of the Position-wise Feed-Forward N
 MAX_SEQ_LEN = 512     # The maximum sequence length for positional encoding; longer sequences will be truncated
 BLOCK_SIZE = 32  # or 32 if you want longer context
 # config.py
-MODEL_TYPE = "mlptrigram"   # "bigram" or "mlp" or "mlptrigram"
+MODEL_TYPE = "mlpngram"   # "bigram" or "mlp" or "mlptrigram" or "mlpngram"
+NGRAM = 3   # trigram
+
 
 
 
@@ -75,4 +77,4 @@ LEARNING_RATE = 1e-3   # Slightly higher for small MLP models, stable for short 
 # --- EARLY STOPPING PARAMETERS ---
 
 # Number of consecutive epochs with no improvement on the validation metric before stopping training
-PATIENCE = 10
+PATIENCE = 20
