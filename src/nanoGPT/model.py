@@ -126,33 +126,37 @@ class MLPNgramLanguageModel(nn.Module):
         self.fc2 = nn.Linear(hidden_dim, vocab_size)
 
     def forward(self, idx, targets=None):
-      B, T = idx.shape
+        B, T = idx.shape
 
-      # --- Pad short sequences ---
-      if T < self.ngram:
-          pad_len = self.ngram - T
-          pad = idx[:, :1].repeat(1, pad_len)
-          idx = torch.cat([pad, idx], dim=1)
-          T = idx.size(1)
+        if T < self.ngram:
+            pad_len = self.ngram - T
+            pad = idx[:, :1].repeat(1, pad_len)
+            idx = torch.cat([pad, idx], dim=1)
+            T = idx.size(1)
 
-      # Now T >= ngram, safe to stack
-      contexts = torch.stack([idx[:, i:i+self.ngram] for i in range(T - self.ngram)], dim=1)
-      x = self.token_embedding(contexts)
-      x = x.view(B, T - self.ngram, -1)
-      x = F.relu(self.fc1(x))
-      logits = self.fc2(x)
+        # create contexts
+        contexts = torch.stack([idx[:, i:i+self.ngram] for i in range(T - self.ngram + 1)], dim=1)
+        x = self.token_embedding(contexts)
+        B, num_ctx, n, E = x.shape
+        x = x.view(B, num_ctx, n * E)
+        x = F.relu(self.fc1(x))
+        logits = self.fc2(x)                         # (B, num_ctx, vocab_size)
 
-      loss = None
-      if targets is not None:
-          if targets.size(1) < self.ngram:
-              # pad targets the same way
-              pad_len = self.ngram - targets.size(1)
-              pad = targets[:, :1].repeat(1, pad_len)
-              targets = torch.cat([pad, targets], dim=1)
-          targets_shifted = targets[:, self.ngram:]
-          loss = F.cross_entropy(logits.reshape(-1, self.vocab_size), targets_shifted.reshape(-1))
+        loss = None
+        if targets is not None:
+            if targets.size(1) < self.ngram:
+                pad_len = self.ngram - targets.size(1)
+                pad = targets[:, :1].repeat(1, pad_len)
+                targets = torch.cat([pad, targets], dim=1)
+            # align targets with contexts
+            targets_shifted = targets[:, self.ngram - 1 : self.ngram - 1 + num_ctx]
+            loss = F.cross_entropy(
+                logits.reshape(-1, self.vocab_size),
+                targets_shifted.reshape(-1)
+            )
 
-      return logits, loss
+        return logits, loss
+
 
 
     @torch.no_grad()

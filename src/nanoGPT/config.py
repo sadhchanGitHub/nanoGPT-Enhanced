@@ -64,7 +64,7 @@ MAX_SEQ_LEN = 512     # The maximum sequence length for positional encoding; lon
 BLOCK_SIZE = 32  # or 32 if you want longer context
 # config.py
 MODEL_TYPE = "mlpngram"   # "bigram" or "mlp" or "mlptrigram" or "mlpngram"
-NGRAM = 3   # trigram
+NGRAM = 5   # 5-gram
 
 
 
