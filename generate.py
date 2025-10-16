@@ -4,7 +4,7 @@ import torch
 
 from nanoGPT import config
 from nanoGPT.model import BigramLanguageModel, MLPBigramLanguageModel
-from nanoGPT.model import MLPNgramLanguageModel
+from nanoGPT.model import MLPNgramLanguageModel ,MLPNgramLanguageModel_posemd
 
 # --- Logging setup ---
 logging.basicConfig(
@@ -24,11 +24,14 @@ def generate_text(start_text: str, max_new_tokens: int):
     elif config.MODEL_TYPE == "mlp":
         model = MLPBigramLanguageModel(len(stoi))  
     elif config.MODEL_TYPE == "mlpngram":
-        model = MLPNgramLanguageModel(len(stoi))             
+        model = MLPNgramLanguageModel(len(stoi))       
+    elif config.MODEL_TYPE == "mlpngram_pos":
+      model = MLPNgramLanguageModel(len(stoi))           
     else:
         raise ValueError(f"❌ Unknown MODEL_TYPE: {config.MODEL_TYPE}")
 
-    model.load_state_dict(checkpoint["model_state_dict"])
+    #model.load_state_dict(checkpoint["model_state_dict"])
+    model.load_state_dict(checkpoint["model_state_dict"], strict=False)
     model.to(config.DEVICE)
     model.eval()
 

@@ -1,0 +1,243 @@
+2025-10-16 20:07:55,052 - INFO - Starting new training run...
+2025-10-16 20:07:55,052 - INFO - Using device: cpu
+2025-10-16 20:07:55,052 - INFO - Log file located at: /content/nanoGPT-Enhanced/logs/train_20251016_200755.log
+2025-10-16 20:07:55,061 - INFO - ▶ Training run initiated with the following configuration:
+2025-10-16 20:07:55,061 - INFO -    - Full Dataset Used: True
+2025-10-16 20:07:55,061 - INFO -    - Max Epochs:        500
+2025-10-16 20:07:55,061 - INFO -    - Random Seed:       42
+2025-10-16 20:07:55,061 - INFO -    - Model Save Path:   /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:55,061 - INFO - ----------------------------------------
+2025-10-16 20:07:55,062 - INFO - 🚀 Starting training engine
+2025-10-16 20:07:55,062 - INFO -    - Using full dataset: True
+2025-10-16 20:07:55,062 - INFO -    - Epochs: 500
+2025-10-16 20:07:55,062 - INFO -    - Random seed: 42
+2025-10-16 20:07:55,155 - INFO - Using MLPNgramLanguageModel
+2025-10-16 20:07:55,155 - INFO -    - Model type: mlpngram
+2025-10-16 20:07:56,441 - INFO - Starting training...
+2025-10-16 20:07:56,591 - INFO - Epoch 1/500 | Train Loss: 4.6111 | Val Loss: 4.5003 | Val Acc: 0.0536
+2025-10-16 20:07:56,596 - INFO -   -> New best model saved with accuracy: 0.0536 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:56,735 - INFO - Epoch 2/500 | Train Loss: 4.4920 | Val Loss: 4.3985 | Val Acc: 0.1120
+2025-10-16 20:07:56,739 - INFO -   -> New best model saved with accuracy: 0.1120 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:56,879 - INFO - Epoch 3/500 | Train Loss: 4.3991 | Val Loss: 4.2862 | Val Acc: 0.1760
+2025-10-16 20:07:56,883 - INFO -   -> New best model saved with accuracy: 0.1760 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:57,023 - INFO - Epoch 4/500 | Train Loss: 4.2871 | Val Loss: 4.1940 | Val Acc: 0.2052
+2025-10-16 20:07:57,028 - INFO -   -> New best model saved with accuracy: 0.2052 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:57,161 - INFO - Epoch 5/500 | Train Loss: 4.1733 | Val Loss: 4.1390 | Val Acc: 0.2047
+2025-10-16 20:07:57,161 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:07:57,310 - INFO - Epoch 6/500 | Train Loss: 4.0694 | Val Loss: 3.9926 | Val Acc: 0.2349
+2025-10-16 20:07:57,315 - INFO -   -> New best model saved with accuracy: 0.2349 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:57,452 - INFO - Epoch 7/500 | Train Loss: 3.9925 | Val Loss: 3.9211 | Val Acc: 0.2266
+2025-10-16 20:07:57,452 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:07:57,583 - INFO - Epoch 8/500 | Train Loss: 3.8911 | Val Loss: 3.8822 | Val Acc: 0.2026
+2025-10-16 20:07:57,583 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:07:57,713 - INFO - Epoch 9/500 | Train Loss: 3.7530 | Val Loss: 3.7029 | Val Acc: 0.2422
+2025-10-16 20:07:57,717 - INFO -   -> New best model saved with accuracy: 0.2422 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:57,848 - INFO - Epoch 10/500 | Train Loss: 3.7053 | Val Loss: 3.6245 | Val Acc: 0.2495
+2025-10-16 20:07:57,852 - INFO -   -> New best model saved with accuracy: 0.2495 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:57,982 - INFO - Epoch 11/500 | Train Loss: 3.5702 | Val Loss: 3.5250 | Val Acc: 0.2464
+2025-10-16 20:07:57,982 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:07:58,110 - INFO - Epoch 12/500 | Train Loss: 3.4929 | Val Loss: 3.4721 | Val Acc: 0.2365
+2025-10-16 20:07:58,111 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:07:58,245 - INFO - Epoch 13/500 | Train Loss: 3.3842 | Val Loss: 3.3638 | Val Acc: 0.2604
+2025-10-16 20:07:58,249 - INFO -   -> New best model saved with accuracy: 0.2604 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:58,394 - INFO - Epoch 14/500 | Train Loss: 3.2922 | Val Loss: 3.2385 | Val Acc: 0.2661
+2025-10-16 20:07:58,398 - INFO -   -> New best model saved with accuracy: 0.2661 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:58,529 - INFO - Epoch 15/500 | Train Loss: 3.2617 | Val Loss: 3.2265 | Val Acc: 0.2526
+2025-10-16 20:07:58,530 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:07:58,670 - INFO - Epoch 16/500 | Train Loss: 3.1453 | Val Loss: 3.1337 | Val Acc: 0.2594
+2025-10-16 20:07:58,670 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:07:58,800 - INFO - Epoch 17/500 | Train Loss: 3.1001 | Val Loss: 3.1403 | Val Acc: 0.2422
+2025-10-16 20:07:58,800 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:07:58,932 - INFO - Epoch 18/500 | Train Loss: 3.0430 | Val Loss: 2.9874 | Val Acc: 0.2844
+2025-10-16 20:07:58,935 - INFO -   -> New best model saved with accuracy: 0.2844 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:59,111 - INFO - Epoch 19/500 | Train Loss: 2.9592 | Val Loss: 2.9990 | Val Acc: 0.2672
+2025-10-16 20:07:59,111 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:07:59,247 - INFO - Epoch 20/500 | Train Loss: 2.9257 | Val Loss: 2.9898 | Val Acc: 0.2661
+2025-10-16 20:07:59,247 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:07:59,403 - INFO - Epoch 21/500 | Train Loss: 2.9433 | Val Loss: 2.9798 | Val Acc: 0.2651
+2025-10-16 20:07:59,403 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:07:59,530 - INFO - Epoch 22/500 | Train Loss: 2.8467 | Val Loss: 2.9469 | Val Acc: 0.2714
+2025-10-16 20:07:59,531 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:07:59,664 - INFO - Epoch 23/500 | Train Loss: 2.8667 | Val Loss: 3.0252 | Val Acc: 0.2750
+2025-10-16 20:07:59,664 - INFO -   -> No improvement. Patience: 5/30
+2025-10-16 20:07:59,791 - INFO - Epoch 24/500 | Train Loss: 2.7110 | Val Loss: 2.7859 | Val Acc: 0.2948
+2025-10-16 20:07:59,795 - INFO -   -> New best model saved with accuracy: 0.2948 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:07:59,929 - INFO - Epoch 25/500 | Train Loss: 2.7663 | Val Loss: 2.8937 | Val Acc: 0.2698
+2025-10-16 20:07:59,929 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:00,060 - INFO - Epoch 26/500 | Train Loss: 2.7650 | Val Loss: 2.7191 | Val Acc: 0.2906
+2025-10-16 20:08:00,060 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:00,192 - INFO - Epoch 27/500 | Train Loss: 2.6500 | Val Loss: 2.7594 | Val Acc: 0.2875
+2025-10-16 20:08:00,193 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:08:00,325 - INFO - Epoch 28/500 | Train Loss: 2.6826 | Val Loss: 2.8217 | Val Acc: 0.2948
+2025-10-16 20:08:00,325 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:08:00,475 - INFO - Epoch 29/500 | Train Loss: 2.6768 | Val Loss: 2.6443 | Val Acc: 0.3224
+2025-10-16 20:08:00,479 - INFO -   -> New best model saved with accuracy: 0.3224 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:00,608 - INFO - Epoch 30/500 | Train Loss: 2.6537 | Val Loss: 2.7201 | Val Acc: 0.2969
+2025-10-16 20:08:00,609 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:00,737 - INFO - Epoch 31/500 | Train Loss: 2.6751 | Val Loss: 2.7494 | Val Acc: 0.2797
+2025-10-16 20:08:00,737 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:00,868 - INFO - Epoch 32/500 | Train Loss: 2.5433 | Val Loss: 2.5700 | Val Acc: 0.3344
+2025-10-16 20:08:00,873 - INFO -   -> New best model saved with accuracy: 0.3344 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:01,008 - INFO - Epoch 33/500 | Train Loss: 2.5571 | Val Loss: 2.5655 | Val Acc: 0.3052
+2025-10-16 20:08:01,009 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:01,136 - INFO - Epoch 34/500 | Train Loss: 2.5574 | Val Loss: 2.6276 | Val Acc: 0.3010
+2025-10-16 20:08:01,137 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:01,272 - INFO - Epoch 35/500 | Train Loss: 2.5290 | Val Loss: 2.7381 | Val Acc: 0.2901
+2025-10-16 20:08:01,272 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:08:01,404 - INFO - Epoch 36/500 | Train Loss: 2.6133 | Val Loss: 2.6828 | Val Acc: 0.3141
+2025-10-16 20:08:01,404 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:08:01,551 - INFO - Epoch 37/500 | Train Loss: 2.5219 | Val Loss: 2.6280 | Val Acc: 0.3031
+2025-10-16 20:08:01,551 - INFO -   -> No improvement. Patience: 5/30
+2025-10-16 20:08:01,757 - INFO - Epoch 38/500 | Train Loss: 2.4807 | Val Loss: 2.6544 | Val Acc: 0.3026
+2025-10-16 20:08:01,757 - INFO -   -> No improvement. Patience: 6/30
+2025-10-16 20:08:01,965 - INFO - Epoch 39/500 | Train Loss: 2.4668 | Val Loss: 2.5346 | Val Acc: 0.3370
+2025-10-16 20:08:01,970 - INFO -   -> New best model saved with accuracy: 0.3370 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:02,185 - INFO - Epoch 40/500 | Train Loss: 2.4887 | Val Loss: 2.6333 | Val Acc: 0.3156
+2025-10-16 20:08:02,185 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:02,406 - INFO - Epoch 41/500 | Train Loss: 2.4885 | Val Loss: 2.5106 | Val Acc: 0.3380
+2025-10-16 20:08:02,412 - INFO -   -> New best model saved with accuracy: 0.3380 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:02,632 - INFO - Epoch 42/500 | Train Loss: 2.5486 | Val Loss: 2.5053 | Val Acc: 0.3286
+2025-10-16 20:08:02,632 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:02,843 - INFO - Epoch 43/500 | Train Loss: 2.4118 | Val Loss: 2.5031 | Val Acc: 0.3443
+2025-10-16 20:08:02,849 - INFO -   -> New best model saved with accuracy: 0.3443 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:03,079 - INFO - Epoch 44/500 | Train Loss: 2.3418 | Val Loss: 2.4996 | Val Acc: 0.3438
+2025-10-16 20:08:03,080 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:03,308 - INFO - Epoch 45/500 | Train Loss: 2.4632 | Val Loss: 2.5434 | Val Acc: 0.3318
+2025-10-16 20:08:03,308 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:03,527 - INFO - Epoch 46/500 | Train Loss: 2.5008 | Val Loss: 2.6223 | Val Acc: 0.3146
+2025-10-16 20:08:03,528 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:08:03,753 - INFO - Epoch 47/500 | Train Loss: 2.4234 | Val Loss: 2.5413 | Val Acc: 0.3177
+2025-10-16 20:08:03,753 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:08:03,962 - INFO - Epoch 48/500 | Train Loss: 2.4458 | Val Loss: 2.5545 | Val Acc: 0.3339
+2025-10-16 20:08:03,962 - INFO -   -> No improvement. Patience: 5/30
+2025-10-16 20:08:04,176 - INFO - Epoch 49/500 | Train Loss: 2.3653 | Val Loss: 2.6158 | Val Acc: 0.3109
+2025-10-16 20:08:04,178 - INFO -   -> No improvement. Patience: 6/30
+2025-10-16 20:08:04,391 - INFO - Epoch 50/500 | Train Loss: 2.4236 | Val Loss: 2.5108 | Val Acc: 0.3328
+2025-10-16 20:08:04,391 - INFO -   -> No improvement. Patience: 7/30
+2025-10-16 20:08:04,587 - INFO - Epoch 51/500 | Train Loss: 2.3403 | Val Loss: 2.5028 | Val Acc: 0.3182
+2025-10-16 20:08:04,587 - INFO -   -> No improvement. Patience: 8/30
+2025-10-16 20:08:04,770 - INFO - Epoch 52/500 | Train Loss: 2.3748 | Val Loss: 2.5340 | Val Acc: 0.3198
+2025-10-16 20:08:04,770 - INFO -   -> No improvement. Patience: 9/30
+2025-10-16 20:08:04,899 - INFO - Epoch 53/500 | Train Loss: 2.4201 | Val Loss: 2.5241 | Val Acc: 0.3411
+2025-10-16 20:08:04,899 - INFO -   -> No improvement. Patience: 10/30
+2025-10-16 20:08:05,032 - INFO - Epoch 54/500 | Train Loss: 2.2903 | Val Loss: 2.4657 | Val Acc: 0.3370
+2025-10-16 20:08:05,032 - INFO -   -> No improvement. Patience: 11/30
+2025-10-16 20:08:05,164 - INFO - Epoch 55/500 | Train Loss: 2.3560 | Val Loss: 2.3286 | Val Acc: 0.3740
+2025-10-16 20:08:05,168 - INFO -   -> New best model saved with accuracy: 0.3740 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:05,302 - INFO - Epoch 56/500 | Train Loss: 2.2823 | Val Loss: 2.5044 | Val Acc: 0.3396
+2025-10-16 20:08:05,302 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:05,436 - INFO - Epoch 57/500 | Train Loss: 2.4185 | Val Loss: 2.4318 | Val Acc: 0.3516
+2025-10-16 20:08:05,436 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:05,566 - INFO - Epoch 58/500 | Train Loss: 2.3432 | Val Loss: 2.5214 | Val Acc: 0.3380
+2025-10-16 20:08:05,566 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:08:05,704 - INFO - Epoch 59/500 | Train Loss: 2.3526 | Val Loss: 2.4573 | Val Acc: 0.3688
+2025-10-16 20:08:05,704 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:08:05,836 - INFO - Epoch 60/500 | Train Loss: 2.3220 | Val Loss: 2.3741 | Val Acc: 0.3620
+2025-10-16 20:08:05,837 - INFO -   -> No improvement. Patience: 5/30
+2025-10-16 20:08:05,964 - INFO - Epoch 61/500 | Train Loss: 2.2733 | Val Loss: 2.4481 | Val Acc: 0.3396
+2025-10-16 20:08:05,964 - INFO -   -> No improvement. Patience: 6/30
+2025-10-16 20:08:06,092 - INFO - Epoch 62/500 | Train Loss: 2.3019 | Val Loss: 2.3850 | Val Acc: 0.3443
+2025-10-16 20:08:06,092 - INFO -   -> No improvement. Patience: 7/30
+2025-10-16 20:08:06,221 - INFO - Epoch 63/500 | Train Loss: 2.3175 | Val Loss: 2.3863 | Val Acc: 0.3552
+2025-10-16 20:08:06,221 - INFO -   -> No improvement. Patience: 8/30
+2025-10-16 20:08:06,355 - INFO - Epoch 64/500 | Train Loss: 2.2984 | Val Loss: 2.3529 | Val Acc: 0.3641
+2025-10-16 20:08:06,356 - INFO -   -> No improvement. Patience: 9/30
+2025-10-16 20:08:06,508 - INFO - Epoch 65/500 | Train Loss: 2.2718 | Val Loss: 2.4227 | Val Acc: 0.3526
+2025-10-16 20:08:06,508 - INFO -   -> No improvement. Patience: 10/30
+2025-10-16 20:08:06,641 - INFO - Epoch 66/500 | Train Loss: 2.2334 | Val Loss: 2.5701 | Val Acc: 0.3333
+2025-10-16 20:08:06,641 - INFO -   -> No improvement. Patience: 11/30
+2025-10-16 20:08:06,786 - INFO - Epoch 67/500 | Train Loss: 2.3314 | Val Loss: 2.4374 | Val Acc: 0.3422
+2025-10-16 20:08:06,786 - INFO -   -> No improvement. Patience: 12/30
+2025-10-16 20:08:06,915 - INFO - Epoch 68/500 | Train Loss: 2.2142 | Val Loss: 2.3977 | Val Acc: 0.3464
+2025-10-16 20:08:06,915 - INFO -   -> No improvement. Patience: 13/30
+2025-10-16 20:08:07,045 - INFO - Epoch 69/500 | Train Loss: 2.3098 | Val Loss: 2.3318 | Val Acc: 0.3620
+2025-10-16 20:08:07,045 - INFO -   -> No improvement. Patience: 14/30
+2025-10-16 20:08:07,173 - INFO - Epoch 70/500 | Train Loss: 2.2717 | Val Loss: 2.3094 | Val Acc: 0.3745
+2025-10-16 20:08:07,177 - INFO -   -> New best model saved with accuracy: 0.3745 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:07,312 - INFO - Epoch 71/500 | Train Loss: 2.2416 | Val Loss: 2.4309 | Val Acc: 0.3609
+2025-10-16 20:08:07,312 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:07,444 - INFO - Epoch 72/500 | Train Loss: 2.2606 | Val Loss: 2.4270 | Val Acc: 0.3573
+2025-10-16 20:08:07,444 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:07,573 - INFO - Epoch 73/500 | Train Loss: 2.2628 | Val Loss: 2.3575 | Val Acc: 0.3646
+2025-10-16 20:08:07,573 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:08:07,703 - INFO - Epoch 74/500 | Train Loss: 2.2576 | Val Loss: 2.4312 | Val Acc: 0.3672
+2025-10-16 20:08:07,703 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:08:07,847 - INFO - Epoch 75/500 | Train Loss: 2.2388 | Val Loss: 2.5031 | Val Acc: 0.3401
+2025-10-16 20:08:07,848 - INFO -   -> No improvement. Patience: 5/30
+2025-10-16 20:08:07,977 - INFO - Epoch 76/500 | Train Loss: 2.2280 | Val Loss: 2.3233 | Val Acc: 0.3693
+2025-10-16 20:08:07,977 - INFO -   -> No improvement. Patience: 6/30
+2025-10-16 20:08:08,106 - INFO - Epoch 77/500 | Train Loss: 2.2493 | Val Loss: 2.3977 | Val Acc: 0.3536
+2025-10-16 20:08:08,106 - INFO -   -> No improvement. Patience: 7/30
+2025-10-16 20:08:08,240 - INFO - Epoch 78/500 | Train Loss: 2.3060 | Val Loss: 2.3878 | Val Acc: 0.3495
+2025-10-16 20:08:08,240 - INFO -   -> No improvement. Patience: 8/30
+2025-10-16 20:08:08,373 - INFO - Epoch 79/500 | Train Loss: 2.2625 | Val Loss: 2.3840 | Val Acc: 0.3661
+2025-10-16 20:08:08,374 - INFO -   -> No improvement. Patience: 9/30
+2025-10-16 20:08:08,509 - INFO - Epoch 80/500 | Train Loss: 2.2366 | Val Loss: 2.3269 | Val Acc: 0.3698
+2025-10-16 20:08:08,509 - INFO -   -> No improvement. Patience: 10/30
+2025-10-16 20:08:08,641 - INFO - Epoch 81/500 | Train Loss: 2.2380 | Val Loss: 2.4054 | Val Acc: 0.3688
+2025-10-16 20:08:08,642 - INFO -   -> No improvement. Patience: 11/30
+2025-10-16 20:08:08,771 - INFO - Epoch 82/500 | Train Loss: 2.2179 | Val Loss: 2.2345 | Val Acc: 0.4042
+2025-10-16 20:08:08,775 - INFO -   -> New best model saved with accuracy: 0.4042 to /content/nanoGPT-Enhanced/models/nanoGPT_enhanced.pth
+2025-10-16 20:08:08,920 - INFO - Epoch 83/500 | Train Loss: 2.2011 | Val Loss: 2.4053 | Val Acc: 0.3547
+2025-10-16 20:08:08,921 - INFO -   -> No improvement. Patience: 1/30
+2025-10-16 20:08:09,052 - INFO - Epoch 84/500 | Train Loss: 2.2619 | Val Loss: 2.4363 | Val Acc: 0.3672
+2025-10-16 20:08:09,052 - INFO -   -> No improvement. Patience: 2/30
+2025-10-16 20:08:09,181 - INFO - Epoch 85/500 | Train Loss: 2.2084 | Val Loss: 2.3070 | Val Acc: 0.3771
+2025-10-16 20:08:09,181 - INFO -   -> No improvement. Patience: 3/30
+2025-10-16 20:08:09,316 - INFO - Epoch 86/500 | Train Loss: 2.1783 | Val Loss: 2.3284 | Val Acc: 0.3714
+2025-10-16 20:08:09,316 - INFO -   -> No improvement. Patience: 4/30
+2025-10-16 20:08:09,450 - INFO - Epoch 87/500 | Train Loss: 2.1233 | Val Loss: 2.3955 | Val Acc: 0.3458
+2025-10-16 20:08:09,451 - INFO -   -> No improvement. Patience: 5/30
+2025-10-16 20:08:09,580 - INFO - Epoch 88/500 | Train Loss: 2.2358 | Val Loss: 2.3519 | Val Acc: 0.3604
+2025-10-16 20:08:09,580 - INFO -   -> No improvement. Patience: 6/30
+2025-10-16 20:08:09,710 - INFO - Epoch 89/500 | Train Loss: 2.1513 | Val Loss: 2.2537 | Val Acc: 0.3943
+2025-10-16 20:08:09,710 - INFO -   -> No improvement. Patience: 7/30
+2025-10-16 20:08:09,839 - INFO - Epoch 90/500 | Train Loss: 2.1653 | Val Loss: 2.4285 | Val Acc: 0.3740
+2025-10-16 20:08:09,839 - INFO -   -> No improvement. Patience: 8/30
+2025-10-16 20:08:09,980 - INFO - Epoch 91/500 | Train Loss: 2.1658 | Val Loss: 2.3334 | Val Acc: 0.3714
+2025-10-16 20:08:09,981 - INFO -   -> No improvement. Patience: 9/30
+2025-10-16 20:08:10,108 - INFO - Epoch 92/500 | Train Loss: 2.2074 | Val Loss: 2.4260 | Val Acc: 0.3547
+2025-10-16 20:08:10,108 - INFO -   -> No improvement. Patience: 10/30
+2025-10-16 20:08:10,241 - INFO - Epoch 93/500 | Train Loss: 2.1511 | Val Loss: 2.4724 | Val Acc: 0.3604
+2025-10-16 20:08:10,241 - INFO -   -> No improvement. Patience: 11/30
+2025-10-16 20:08:10,375 - INFO - Epoch 94/500 | Train Loss: 2.1620 | Val Loss: 2.5679 | Val Acc: 0.3490
+2025-10-16 20:08:10,375 - INFO -   -> No improvement. Patience: 12/30
+2025-10-16 20:08:10,506 - INFO - Epoch 95/500 | Train Loss: 2.2135 | Val Loss: 2.4412 | Val Acc: 0.3417
+2025-10-16 20:08:10,506 - INFO -   -> No improvement. Patience: 13/30
+2025-10-16 20:08:10,636 - INFO - Epoch 96/500 | Train Loss: 2.1003 | Val Loss: 2.2994 | Val Acc: 0.3896
+2025-10-16 20:08:10,637 - INFO -   -> No improvement. Patience: 14/30
+2025-10-16 20:08:10,765 - INFO - Epoch 97/500 | Train Loss: 2.1324 | Val Loss: 2.2766 | Val Acc: 0.3927
+2025-10-16 20:08:10,766 - INFO -   -> No improvement. Patience: 15/30
+2025-10-16 20:08:10,897 - INFO - Epoch 98/500 | Train Loss: 2.1287 | Val Loss: 2.2439 | Val Acc: 0.3880
+2025-10-16 20:08:10,897 - INFO -   -> No improvement. Patience: 16/30
+2025-10-16 20:08:11,038 - INFO - Epoch 99/500 | Train Loss: 2.1645 | Val Loss: 2.3859 | Val Acc: 0.3844
+2025-10-16 20:08:11,038 - INFO -   -> No improvement. Patience: 17/30
+2025-10-16 20:08:11,167 - INFO - Epoch 100/500 | Train Loss: 2.1906 | Val Loss: 2.3201 | Val Acc: 0.3943
+2025-10-16 20:08:11,167 - INFO -   -> No improvement. Patience: 18/30
+2025-10-16 20:08:11,302 - INFO - Epoch 101/500 | Train Loss: 2.1027 | Val Loss: 2.4576 | Val Acc: 0.3557
+2025-10-16 20:08:11,303 - INFO -   -> No improvement. Patience: 19/30
+2025-10-16 20:08:11,434 - INFO - Epoch 102/500 | Train Loss: 2.1471 | Val Loss: 2.3589 | Val Acc: 0.3781
+2025-10-16 20:08:11,435 - INFO -   -> No improvement. Patience: 20/30
+2025-10-16 20:08:11,572 - INFO - Epoch 103/500 | Train Loss: 2.0753 | Val Loss: 2.4197 | Val Acc: 0.3573
+2025-10-16 20:08:11,573 - INFO -   -> No improvement. Patience: 21/30
+2025-10-16 20:08:11,701 - INFO - Epoch 104/500 | Train Loss: 2.1559 | Val Loss: 2.2681 | Val Acc: 0.3865
+2025-10-16 20:08:11,701 - INFO -   -> No improvement. Patience: 22/30
+2025-10-16 20:08:11,831 - INFO - Epoch 105/500 | Train Loss: 2.1789 | Val Loss: 2.3470 | Val Acc: 0.3797
+2025-10-16 20:08:11,831 - INFO -   -> No improvement. Patience: 23/30
+2025-10-16 20:08:11,976 - INFO - Epoch 106/500 | Train Loss: 2.1689 | Val Loss: 2.4500 | Val Acc: 0.3583
+2025-10-16 20:08:11,976 - INFO -   -> No improvement. Patience: 24/30
+2025-10-16 20:08:12,135 - INFO - Epoch 107/500 | Train Loss: 2.1646 | Val Loss: 2.2064 | Val Acc: 0.3943
+2025-10-16 20:08:12,136 - INFO -   -> No improvement. Patience: 25/30
+2025-10-16 20:08:12,279 - INFO - Epoch 108/500 | Train Loss: 2.1720 | Val Loss: 2.2850 | Val Acc: 0.3901
+2025-10-16 20:08:12,279 - INFO -   -> No improvement. Patience: 26/30
+2025-10-16 20:08:12,413 - INFO - Epoch 109/500 | Train Loss: 2.1519 | Val Loss: 2.2794 | Val Acc: 0.3786
+2025-10-16 20:08:12,414 - INFO -   -> No improvement. Patience: 27/30
+2025-10-16 20:08:12,550 - INFO - Epoch 110/500 | Train Loss: 2.1756 | Val Loss: 2.2457 | Val Acc: 0.3750
+2025-10-16 20:08:12,550 - INFO -   -> No improvement. Patience: 28/30
+2025-10-16 20:08:12,682 - INFO - Epoch 111/500 | Train Loss: 2.0874 | Val Loss: 2.3577 | Val Acc: 0.3745
+2025-10-16 20:08:12,682 - INFO -   -> No improvement. Patience: 29/30
+2025-10-16 20:08:12,811 - INFO - Epoch 112/500 | Train Loss: 2.1870 | Val Loss: 2.1644 | Val Acc: 0.4010
+2025-10-16 20:08:12,811 - INFO -   -> No improvement. Patience: 30/30
+2025-10-16 20:08:12,811 - INFO - ⏹ Early stopping triggered after 30 epochs without improvement.
+2025-10-16 20:08:12,811 - INFO - 🏁 Training finished. Best validation accuracy: 0.4042
+2025-10-16 20:08:12,812 - INFO - ✅ Training run script finished.

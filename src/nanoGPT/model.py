@@ -185,3 +185,77 @@ class MLPNgramLanguageModel(nn.Module):
             idx = torch.cat([idx, next_idx], dim=1)
 
         return idx
+
+class MLPNgramLanguageModel_posemd(nn.Module):
+    def __init__(self, vocab_size, ngram=3, embed_dim=256, hidden_dim=512):
+        super().__init__()
+        self.vocab_size = vocab_size
+        self.ngram = ngram
+        self.embed_dim = embed_dim
+        
+        self.token_embedding = nn.Embedding(vocab_size, embed_dim)
+        self.pos_embedding = nn.Embedding(ngram, embed_dim)  # positional embeddings
+        
+        self.fc1 = nn.Linear(embed_dim * ngram, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, vocab_size)
+
+    def forward(self, idx, targets=None):
+        B, T = idx.shape
+
+        if T < self.ngram:
+            pad_len = self.ngram - T
+            pad = idx[:, :1].repeat(1, pad_len)
+            idx = torch.cat([pad, idx], dim=1)
+            T = idx.size(1)
+
+        # create contexts
+        contexts = torch.stack([idx[:, i:i+self.ngram] for i in range(T - self.ngram + 1)], dim=1)
+        x = self.token_embedding(contexts)  # (B, num_ctx, ngram, E)
+
+        # add positional embeddings
+        pos_idx = torch.arange(self.ngram, device=idx.device)  # [0,1,...,ngram-1]
+        pos_emb = self.pos_embedding(pos_idx)                 # (ngram, E)
+        x = x + pos_emb                                      # broadcasting
+
+        B, num_ctx, n, E = x.shape
+        x = x.view(B, num_ctx, n * E)
+        x = F.relu(self.fc1(x))
+        logits = self.fc2(x)
+
+        loss = None
+        if targets is not None:
+            if targets.size(1) < self.ngram:
+                pad_len = self.ngram - targets.size(1)
+                pad = targets[:, :1].repeat(1, pad_len)
+                targets = torch.cat([pad, targets], dim=1)
+            targets_shifted = targets[:, self.ngram - 1 : self.ngram - 1 + num_ctx]
+            loss = F.cross_entropy(logits.reshape(-1, self.vocab_size),
+                                   targets_shifted.reshape(-1))
+        return logits, loss
+    
+    @torch.no_grad()
+    def generate(self, idx, max_new_tokens, temperature=0.8, top_k=None):
+        for _ in range(max_new_tokens):
+            # --- Handle short starting sequences ---
+            if idx.size(1) < self.ngram:
+                pad_len = self.ngram - idx.size(1)
+                pad = idx[:, :1].repeat(1, pad_len)
+                context = torch.cat([pad, idx], dim=1)
+            else:
+                context = idx[:, -self.ngram:]
+
+            logits, _ = self(context)
+            logits = logits[:, -1, :] / temperature
+
+            # --- Top-k filtering ---
+            if top_k is not None:
+                v, _ = torch.topk(logits, top_k)
+                min_v = v[:, -1].unsqueeze(1)
+                logits[logits < min_v] = -float('inf')
+
+            # --- Sample next token ---
+            probs = F.softmax(logits, dim=-1)
+            next_idx = torch.multinomial(probs, 1)
+            idx = torch.cat([idx, next_idx], dim=1)
+
+        return idx

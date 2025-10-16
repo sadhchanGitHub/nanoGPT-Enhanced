@@ -63,7 +63,7 @@ D_FF = 4 * D_MODEL     # The inner dimension of the Position-wise Feed-Forward N
 MAX_SEQ_LEN = 512     # The maximum sequence length for positional encoding; longer sequences will be truncated
 BLOCK_SIZE = 32  # or 32 if you want longer context
 # config.py
-MODEL_TYPE = "mlpngram"   # "bigram" or "mlp" or "mlptrigram" or "mlpngram"
+MODEL_TYPE = "mlpngram_pos"   # "bigram" or "mlp" or "mlptrigram" or "mlpngram"
 NGRAM = 5   # 5-gram
 
 
@@ -72,9 +72,10 @@ NGRAM = 5   # 5-gram
 # --- TRAINING HYPERPARAMETERS ---
 
 #LEARNING_RATE = 1e-4   # The initial learning rate for the Adam optimizer
-LEARNING_RATE = 1e-3   # Slightly higher for small MLP models, stable for short sequences
+#LEARNING_RATE = 1e-3   # Slightly higher for small MLP models, stable for short sequences
+LEARNING_RATE = 1e-4  # or 3e-4 if oscillation continues
 
 # --- EARLY STOPPING PARAMETERS ---
 
 # Number of consecutive epochs with no improvement on the validation metric before stopping training
-PATIENCE = 20
+PATIENCE = 30

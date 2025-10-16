@@ -9,7 +9,7 @@ import numpy as np
 # Relative imports from the project structure
 from .model import BigramLanguageModel
 from .model import MLPBigramLanguageModel
-from .model import MLPNgramLanguageModel
+from .model import MLPNgramLanguageModel, MLPNgramLanguageModel_posemd
 from . import config
 
 # --- LOGGING SETUP ---
@@ -169,7 +169,9 @@ def main(full_dataset: bool, num_epochs: int, sample_size: int, seed: int = 42):
       logging.info("Using MLPBigramLanguageModel")   
     elif config.MODEL_TYPE == "mlpngram":
       model = MLPNgramLanguageModel(vocab_size).to(config.DEVICE)
-      logging.info("Using MLPNgramLanguageModel")         
+    elif config.MODEL_TYPE == "mlpngram_pos":
+      model = MLPNgramLanguageModel_posemd(vocab_size).to(config.DEVICE)
+      logging.info("Using MLPNgramLanguageModel_posemd")         
     else:
       raise ValueError(f"Unknown MODEL_TYPE: {config.MODEL_TYPE}")
 
